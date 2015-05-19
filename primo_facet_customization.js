@@ -1,22 +1,27 @@
-/* dupe topics list */
+/* uses jquery, which should already be loaded, as Primo uses it as well */
+/* this is all hard-coded to facet 7. Replace refereces to exlidFacet7 and exlidFacetSublist7 with the correct facet number for your own needs. */
+
+/* clone topics list */
 var topicsHolder = document.getElementById("exlidFacet7")
 var topicsList = document.getElementById("exlidFacetSublist7");
 var topicsClone1 = topicsList.cloneNode(true);
 var topicsClone2 = topicsList.cloneNode(true);
 
+/* copy one, for frequency display */
 var topicsHead1 = document.createElement('h4');
 var topicsHeadtext1 = document.createTextNode("Topic");
 topicsHead1.appendChild(topicsHeadtext1);
 topicsHead1.className  = "EXLFacetTitleLabelPHolderfacet_topic_b"
 
+topicsClone1.id = "exlidFacetSublist7b"
+topicsHolder.appendChild(topicsHead1);
+topicsHolder.appendChild(topicsClone1);
+
+/* copy 2, for alphabetical display */
 var topicsHead2 = document.createElement('h4');
 var topicsHeadtext2 = document.createTextNode("Topic");
 topicsHead2.appendChild(topicsHeadtext2);
 topicsHead2.className  = "EXLFacetTitleLabelPHolderfacet_topic_c"
-
-topicsClone1.id = "exlidFacetSublist7b"
-topicsHolder.appendChild(topicsHead1);
-topicsHolder.appendChild(topicsClone1);
 
 topicsClone2.id = "exlidFacetSublist7c"
 topicsHolder.appendChild(topicsHead2);
@@ -29,11 +34,6 @@ var li = $('#exlidFacetSublist7 li').get();
 li.sort(function(a, b) {
     a = $('a', a).text();
     b = $('a', b).text();
-
-    // you may want to process the text values further here, perhaps
-    // running it through $.trim, reducing whitespace sequences with
-    // a regular expression, or lower- or upper-casing letters to
-    // make the comparison case-insensitive.
 
     return (a < b) ? -1 : ((a > b) ? 1 : 0);
 });
@@ -87,7 +87,8 @@ function removejscssfile(filename, filetype){
             }
 }
 
-var stylesheets = ["//proxy.seattleu.edu/public/primo1.css", "//proxy.seattleu.edu/public/primo2.css", "//proxy.seattleu.edu/public/primo3.css", "//proxy.seattleu.edu/public/primo4.css", "//proxy.seattleu.edu/public/primo5.css"];
+/* replace "primo1.css" etc. in stylesheets (below) with the correct URLs for the primo stylsheets on your web server, and add or remove from this list as you please. */
+var stylesheets = ["primo1.css", "primo2.css", "primo3.css", "primo4.css", "primo5.css"];
 var labels = ["Cloud", "Frequency Short", "Frequency Long", "Alpha Short", "Aplha Long", "Reset" ];
 
 var index = 0
@@ -95,7 +96,9 @@ var index = 0
 function goCSS(){	
     loadjscssfile(stylesheets[index], "css")
     removejscssfile(stylesheets[index-1], "css")
+    // comment out or remove this alert when not needed for testing
     alert("Stylesheet loaded: " + labels[index])
-	index++
+    index++
+    /* increase or decreast the '5' below, if you have more or fewer than 5 stylsheets in your list */
     if (index > 5){index = 0;}
 }
