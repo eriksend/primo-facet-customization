@@ -1,0 +1,9 @@
+/* if you are not working with facet 7 (the eighth facet in the list), replace all occurences of ol#exlidFacetSublist7 with the correct correct ID for the facet sublist you are working with */
+
+/* unhide Topic facet for redisplay */
+h4.EXLFacetTitleLabelPHolderfacet_topic_b, ol#exlidFacetSublist7b {display:block;}
+
+/* sytle Topic Facet as frequency list (long) */
+h4.EXLFacetTitleLabelPHolderfacet_topic_b::after {content:' (Freq)';}
+ol#exlidFacetSublist7b li.EXLAdditionalFacet {display:block;}
+ol#exlidFacetSublist7b li.EXLFacetsDisplayMore{display: none;}
