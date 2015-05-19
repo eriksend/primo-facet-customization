@@ -1,0 +1,7 @@
+/* if you are not working with facet 7 (the eighth facet in the list), replace all occurences of ol#exlidFacetSublist7 with the correct correct ID for the facet sublist you are working with */
+
+/* unhide Topic facet for redisplay */
+h4.EXLFacetTitleLabelPHolderfacet_topic_c, ol#exlidFacetSublist7c {display:block;}
+
+/* sytle Topic Facet as Alpha list (short) */
+h4.EXLFacetTitleLabelPHolderfacet_topic_c::after {content:' (Alpha)';}
