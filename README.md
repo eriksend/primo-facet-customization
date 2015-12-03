@@ -3,7 +3,7 @@ Javascript to redesign display of facet data in the Ex Libris Primo library cata
 
 Primo offers a small ammount of native customization of facet display.
 
-Each type of facet data may natively be set:
+In the PBO each type of facet data may natively be set:
 
 * On/Off
 * Position in facet menu
