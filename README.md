@@ -16,3 +16,5 @@ Include the JavaScript file primo_facets.js in your Primo footer, or add the cod
 
 This includes two code blocks that can be uncommednted to switch between two styles tested at Seattle University [ http://primo.seattleu.edu ]. One, designed for "topic" facets, swiches to anf from a word cloud view. The other switches between frequency sorted and alphabetical (assuming your default sort is already frequency!).
 
+Steal my images and CSS, or build your own custom versions.
+Some Javascript skill is required for implementation, and facility with CSS is required if you don't want to live with my two display choices.
