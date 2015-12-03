@@ -12,10 +12,7 @@ Each type of facet data may natively be set:
 
 Because the facet data will be presented predictably we can manipulate it with JavaScript and CSS in ways not offered in the native customizations.
 
-This script and acompanying CSS toggle one facet through six display modes, Word Cloud, Alphabetical (short list), Alphabetical (long list), Frequency (short list), Frequency (long list), and off.
+Include the JavaScript file primo_facets.js in your Primo footer, or add the code to a script file of your own, make four or five localizing edits, and start toggling one of your facets between two display modes.
 
-To test it out, activate, or select an active, facet in your Primo, set it to display the number of facets you want in the "short" lists, order by frequency, and and hide it in your default stylesheet.
+This includes two code blocks that can be uncommednted to switch between two styles tested at Seattle University [ http://primo.seattleu.edu ]. One, designed for "topic" facets, swiches to anf from a word cloud view. The other switches between frequency sorted and alphabetical (assuming your default sort is already frequency!).
 
-Then, edit the javascript to point to your selected facet, and the correct URLs for your stylesheets, and insert a link somewhere to call the toggle function.
-
-Have fun
