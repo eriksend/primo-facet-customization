@@ -22,6 +22,27 @@ Javascript to redesign display of facet data in the Ex Libris Primo library cata
 - Some Javascript skill is required for implementation, and facility with CSS is required if you don't want to live with my two display choices.
 
 ### Implementation (Recipe) Steps
+```js
+/* begin localization */
+
+/* What facet do you want to restyle? The first enabled facet is labeled "exlidFacet0", 
+followed by "exlidFacet1", etc. facets without values in any given search do not cause renumbering
+of subsequent facets. Replace "0" below with the number from the facet you want to restyle */
+
+var localFacetNumber = "0" 
+
+/* what image or text will you use for an activation button? */
+
+var activationButtonIsText = "no" // change to "yes" for a text button
+var activationButtonOffStateText = "button off-state text" // change to text of off-state button, i.e. "sort" or "cloud"
+var activationButtonOnStateText = "button on-state text" // change to text of on-state button, i.e. "un-sort" or "de-cloud"
+var activationButtonOffStateImageURL = "http://server/image_on" // change to URL of your off-state button image
+var activationButtonOnStateImageURL = "http://server/image_off" // change to URL of your on-state button image
+
+/* local stylesheets */
+var activeStylesheetURL = "http://server/styled_css" // change to URL of your on-state button image
+
+/* end localization */
 
 ### Accessibility
  - Accessability of word cloud display is limited
@@ -32,3 +53,4 @@ Javascript to redesign display of facet data in the Ex Libris Primo library cata
 
 ### Mobile Support
  - hidden in default Primo mobile views
+```
