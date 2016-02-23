@@ -21,7 +21,7 @@ Javascript to redesign display of facet data in the Ex Libris Primo library cata
 - Steal my images and CSS, or build your own custom versions.
 - Some Javascript skill is required for implementation, and facility with CSS is required if you don't want to live with my two display choices.
 
-### Implementation (Recipe) Steps
+### Implementation
  - Customize the localization variables in the javascript withdetails specific to your own Primo instance.
 
 ```js
