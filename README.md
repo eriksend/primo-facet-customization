@@ -43,6 +43,7 @@ var activationButtonOnStateImageURL = "http://server/image_off" // change to URL
 var activeStylesheetURL = "http://server/styled_css" // change to URL of your on-state button image
 
 /* end localization */
+```
 
 ### Accessibility
  - Accessability of word cloud display is limited
@@ -53,4 +54,3 @@ var activeStylesheetURL = "http://server/styled_css" // change to URL of your on
 
 ### Mobile Support
  - hidden in default Primo mobile views
-```
